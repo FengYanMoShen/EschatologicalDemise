@@ -1,2 +1,2 @@
 # EschatologicalDemise
-末世终焉
+终焉末日
