@@ -6,16 +6,17 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class Main {
-    static Thread thread1 = new Thread();
-    static Thread thread2 = new Thread();
-    static Thread thread3 = new Thread();
-    private static String programmer = "FengYanMoShen";
-    private static final String SHUTDOWN_TITLE = "Eschatological Demise - shutting down!";
+    static Thread thread1 = new Thread();// 添加一个新线程
+    static Thread thread2 = new Thread();// 添加一个新线程
+    static Thread thread3 = new Thread();// 添加一个新线程
+    private static String programmer = "FengYanMoShen";// 程序员："FengYanMoShen"
 
-    private static String MainIconPath = "assets/Icon.jpg";
+    private static final String SHUTDOWN_TITLE = "Eschatological Demise - shutting down!";// 关闭窗口时的标题
+
+    private static String MainIconPath = "assets/Icon.jpg";// 程序窗口的图标
 
     static void author(String programmer){
-        System.out.println(programmer);
+        System.out.println(programmer);// 打印 programmer
     }
 
     static void WindowEventLauncher(){
@@ -33,20 +34,16 @@ public class Main {
           jFrame.addWindowListener(new WindowAdapter() {
               public void windowClosing(WindowEvent e) {
                   jFrame.setTitle(SHUTDOWN_TITLE); // 修改窗口标题成"Eschatological Demise - shutting down!"
-                  /* 处理窗口关闭事件
-                   * 调用Java的System类的exit方法，用于终止当前正在运行的Java虚拟机，
-                   * 并传递一个退出状态码给操作系统。在这里，传递的状态码为0，表示正常退出。
-                   */
-                  System.exit(0);
+                  System.exit(0);// 处理窗口关闭事件,终止当前正在运行的Java虚拟机，并传递一个退出状态码0给操作系统，表示正常退出。
               }
           });
     }
 
     public static void main(String[] args) {
-        thread1.start();
-        thread2.start();
-        thread3.start();
-        System.out.println("hello world!");
+        thread1.start();// 线程1启动
+        thread2.start();// 线程2启动
+        thread3.start();// 线程3启动
+        System.out.println("hello world!");// 打印 programmer
 
         author(programmer);
         WindowEventLauncher();
