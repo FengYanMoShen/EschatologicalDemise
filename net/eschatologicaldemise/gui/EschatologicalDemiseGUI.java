@@ -1,11 +1,15 @@
 package net.eschatologicaldemise.gui;
 
+import com.mojang.logging.LogUtils;
+import org.slf4j.Logger;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class EschatologicalDemiseGUI {
+    static final Logger LOGGER = LogUtils.getLogger();
     private static final Font MONOSPACED = new Font("Monospaced", 0, 12);
     private static String GUIIconPath = "assets/Icon.jpg";// 程序窗口的图标
     private static final String SHUTDOWN_TITLE = "Eschatological Demise - shutting down!";// 关闭窗口时的标题
