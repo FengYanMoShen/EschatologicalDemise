@@ -9,6 +9,7 @@ public class EschatologicalDemiseGUI {
     private static final Font MONOSPACED = new Font("Monospaced", 0, 12);
     private static String GUIIconPath = "assets/Icon.jpg";// 程序窗口的图标
     private static final String SHUTDOWN_TITLE = "Eschatological Demise - shutting down!";// 关闭窗口时的标题
+    public void EschatologicalDemiseGUI(){}
     public static void WindowEventLauncher(){
         ImageIcon icon = new ImageIcon(GUIIconPath);// 新建一个ImageIcon对象，指定图标文件的路径
         Image image = icon.getImage();// 获取ImageIcon的Image对象
