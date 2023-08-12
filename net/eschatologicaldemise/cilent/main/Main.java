@@ -1,11 +1,10 @@
-package net.eschatologicaldemise.cilent;
+package net.eschatologicaldemise.cilent.main;
 
-import net.eschatologicaldemise.gui.EschatologicalDemiseGUI;
+import net.eschatologicaldemise.cilent.gui.EschatologicalDemiseGUI;
 
 public class Main {
-    static Thread thread1 = new Thread();// 添加一个新线程
-    static Thread thread2 = new Thread();// 添加一个新线程
-    static Thread thread3 = new Thread();// 添加一个新线程
+    static Thread thread1, thread2, thread3;// 添加3个新线程
+
     private static String programmer = "FengYanMoShen";// 程序员："FengYanMoShen"
 
     static void author(String programmer){
@@ -20,6 +19,6 @@ public class Main {
         System.out.println("hello world!");
         author(programmer);// 打印 programmer
 
-        EschatologicalDemiseGUI.WindowEventLauncher();
+        new EschatologicalDemiseGUI();
     }
 }
